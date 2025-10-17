@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="kor">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        border: 1px solid;
+        margin: 0px auto;
+        width: 1280px;
+        background-color: white
+    }
+
+    #header{ /*화면 맨 위*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #nav{ /*메뉴바*/
+        width: 70%;
+        background-color: #C0CDEF; /*배경색*/
+        border: #6182D6 2px solid; /*테두리 선*/
+        display: inline;
+        padding: 10px;
+        border-radius: 10px; /*모서리 둥글게*/
+    }
+
+    #nav span{
+        display: inline-flex;
+        margin-top: 3px;
+        margin: 50px;
+    }
+
+    #nav a:link{ /*링크를 방문하기 전 스타일*/
+        color: black;
+        text-decoration: none;
+        font-weight: 550;
+    }
+
+    #nav a:visited{ /*링크를 방문한 후 스타일*/
+        color: black;
+        text-decoration: none;
+        font-weight: 550;
+    }
+
+    #nav a:hover{ /*링크에 마우스 올렸을 때 스타일*/
+        text-decoration: none;
+        color: blue;
+        font-weight: 800;
+    }
+
+    #join{
+        margin-left: 40px;
+        text-align: center;
+    }
+
+    #join span{ /*마우스 올리기 전 스타일*/
+        background-color: rgb(248, 248, 177);
+        border: aqua 2px solid;
+        width: 300px;
+        display: inline;
+        padding: 10px 15px;
+        border-radius: 10px; /*모서리 둥글게*/
+
+        display: inline-block;
+        width: 100%;
+        color: black;
+        text-decoration: none;
+        font-weight: 550;
+    }
+
+    #join span:hover{ /*마우스 올렸을 때*/
+        background-color: rgb(250, 211, 211);
+        color: rgb(69, 71, 206);
+        font-weight: 800;
+    }
+
+    #main{ /*화면 가운데*/
+        border: 1px solid;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    #best_img{
+        border: #6182D6 1px solid;
+        width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 40px; /*모서리 둥글게*/
+        padding: 30px;
+    }
+
+    #login{ /*로그인 전체 영역*/
+        display: flexbox;
+        text-align: center;
+        padding: 30px;
+        border-radius: 40px; /*모서리 둥글게*/
+        border: #6182D6 1px solid;
+        width: 300px;
+    }
+
+    #login_btn span{
+        border: #073bc0 1px solid;
+        padding: 10px 0px;
+        border-radius: 40px; /*모서리 둥글게*/
+        background-color: rgb(133, 186, 255);
+        margin-top: 10px;
+
+        display: inline-block;
+        width: 100%;
+        color: white;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    #login_btn span:hover{
+        display: inline-block;
+        width: 100%;
+        background-color: #2255d6;
+        font-weight: 800;
+    }
+
+    #notice{ /*공지사항 전체 영역*/
+        display: flexbox;
+        text-align: center;
+        padding: 30px;
+        border-radius: 40px; /*모서리 둥글게*/
+        border: #6182D6 1px solid;
+        width: 300px;
+        margin-top: 20px;
+    }
+
+    #notice table{
+        display: inline;
+        border: #6182D6 1px solid;
+    }
+</style>
+
+<body>
+    <div id="header">
+        <img src="./img/로고 이미지.png" alt="사이트 로고" width="15%" style="margin-top: 20px;">
+        <div>
+            <div id="nav">
+                <span><a href="07_index.html">[사이트 소개]</a></span>
+                <span><a href="">[팬아트]</a></span>
+                <span><a href="">[공지사항]</a></span>
+            </div>
+        </div>
+        <div>
+            <div id="join">
+                <a href="04_signup.html"><span>★회원가입★</span></a>
+            </div>
+        </div>
+    </div>
+
+    <div id="main">
+        <div id="best_img">
+            <img src="./img/명예의 전당.PNG" alt="명예의 전당 그림" width="700px">
+        </div>
+
+        <div id="rigth">
+            <div id="login">
+                <p style="font-size: 18px;">환영합니다! <br> 로그인하고 더 편하게 이용하세요~</p>
+                <div id="login_btn">
+                    <a href="03_login.html"><span>로그인</span></a>
+                </div>
+            </div>
+            <div id="notice">
+                <span>공지사항</span>
+                <table>
+                    <tr><td>1</td></tr>
+                </table>
+                <table>
+                    <tr><td>2</td></tr>
+                </table>
+                <table>
+                    <tr><td>3</td></tr>
+                </table>
+                <table>
+                    <tr><td>4</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="img">실시간 팬아트 이미지 게시판</div>
+</body>
+</html>

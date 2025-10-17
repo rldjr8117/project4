@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        margin: 0px auto;
+        width: 1280px;
+        display: flex;
+        justify-content: center;
+
+        align-items: center;
+    }
+
+    #main {
+        width: 60%;
+        height: 650px;
+    }
+
+    #logo {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #logo-div {
+        width: 250px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #login-panel {
+        border-radius: 15px;
+        border: rgb(206, 206, 206) 1px solid;
+        width: 80%;
+        height: 200px;
+    }
+
+    #id-panel {
+
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: left;
+
+    }
+
+    #id-panel:hover {
+        border-radius: 15px;
+        border: red 1px solid;
+
+    }
+
+    #pw-panel:hover {
+        border-radius: 15px;
+        border: red 1px solid;
+
+    }
+
+    #pw-panel {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: left;
+    }
+
+    #id-area {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+        align-items: center;
+        cursor: pointer;
+    }
+
+
+
+
+    #pw-area {
+        margin-left: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+        height: 100%;
+        cursor: pointer;
+    }
+
+    #id-input {
+        border-style: hidden;
+        font-size: 25px;
+        width: 500px;
+        height: 50px;
+
+        outline: none;
+    }
+
+    #pw-input {
+        border-style: hidden;
+        font-size: 25px;
+        width: 500px;
+        height: 50px;
+
+        outline: none;
+
+    }
+
+    #loginall {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: 100%;
+        height: 200px;
+
+    }
+
+    #save-div {
+        width: 100%;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #button-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 70px;
+
+    }
+
+    #search-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+    }
+
+    #banner-div {
+        width: 100%;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #footer-div {
+        width: 100%;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #savepanel-div {
+        width: 80%;
+        display: flex;
+        justify-content: left;
+        align-items: center;
+    }
+
+    #search-ul li {
+        display: inline-block;
+    }
+
+    #footer-ul li {
+        display: inline-block;
+    }
+
+    #loginbutton-div {
+        border-radius: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 60px;
+        background-color: rgb(95, 146, 255);
+        cursor: pointer;
+    }
+
+    #loginbutton-div span h2 {
+        color: rgb(255, 255, 255);
+    }
+
+    #search-ul li span h2 {
+        font-size: 15px;
+        color: gray;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    #footer-ul li span h2 {
+        font-size: 15px;
+        color: gray;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+    #banner {
+        width: 100%;
+        height: 100%;
+    }
+
+    #logoimg {
+        cursor: pointer;
+    }
+
+    #loginbackground2 {
+        border-radius: 15px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 320px;
+    }
+
+    #loginbackground1 {
+        border: rgb(206, 206, 206) 1px solid;
+        border-radius: 15px;
+        display: block;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 450px;
+        
+    }
+
+   
+    #signup{
+        width: 80%;
+        height: 100%;
+    }
+
+     #loginbackgroundarea{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px;
+        width: 100%;
+        height: 100px;
+    }
+
+    h1{
+        color: gray;
+    }
+
+</style>
+
+<body>
+    <div id="main">
+        <div id="logo">
+            <div id="logo-div">
+                <a href="01_main.html"><img id="logoimg" src="./img/logo.png" width="250px" height="190px" alt=""></a>
+            </div>
+        </div>
+        <div id="loginbackground1">
+            <div id="loginbackgroundarea">
+                <div id="signup">
+                    <h1>Sign up</h1>
+                </div>
+            </div>
+            <div id="loginbackground2">
+                <div id="loginall">
+                    <div id="login-panel">
+                        <div id="id-panel">
+                            <div id="id-area">
+                                <input id=id-input type="text" maxlength="20" placeholder="아이디를 입력해주세요">
+                            </div>
+                        </div>
+                        <div id="pw-panel">
+                            <div id="pw-area">
+                                <input id=pw-input type="password" maxlength="20" placeholder="비밀번호를 입력해주세요">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="save-div">
+                    <div id="savepanel-div">
+                        <input type="checkbox">로그인 상태유지
+                    </div>
+                </div>
+                <div id="button-div">
+                    <div id="loginbutton-div">
+                        <span>
+                            <h2>로그인</h2>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="search-div">
+            <ul id="search-ul">
+                <li><span>
+                        <h2>비밀번호 찾기</h2>
+                    </span></li>
+                <li><span>
+                        <h2>아이디 찾기</h2>
+                    </span></li>
+                <li><span>
+                        <h2><a href="04_signup.html">회원가입</a></h2>
+                    </span></li>
+            </ul>
+        </div>
+        <div id="banner-div">
+            <div id="banner">
+                <img src="./img/city.jpg" alt="" width=100% height=100%>
+            </div>
+        </div>
+        <div id="footer-div">
+            <ul id="footer-ul">
+                <li><span>
+                        <h2>이용약관</h2>
+                    </span></li>
+                <li><span>
+                        <h2>개인정보 처리방침</h2>
+                    </span></li>
+                <li><span>
+                        <h2>고객센터</h2>
+                    </span></li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>팬아트 커뮤니티</title>
+    </head>
+
+<style>
+    /* 기본 설정 */
+    .ex03 { box-shadow: 5px 10px 5px 5px gray;}
+
+    body {
+        width: 1080px;
+        margin: 0px auto;
+        font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; 
+    }
+
+    #full {
+        display: flex;
+        justify-content: left;
+        width: 100%;
+        height: 700px;
+        background-color: black;
+    }
+
+    /* --- 좌측 (로그인/기능) 영역: wjfqks1 --- */
+    #wjfqks1{
+        width: 50%;
+        height: 100%;
+        background-color: #f7f7f7; 
+        padding: 50px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column; 
+        align-items: center; 
+    }
+    
+    #rmsid {
+        height: 15%; 
+    }
+
+    #login {
+        width: 80%;
+        max-width: 400px;
+        padding: 40px 30px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    #search {
+        width: 80%;
+        max-width: 400px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    /* 로그인 UI 스타일 */
+    .login-header {
+        color: #333;
+        margin-top: 0;
+        margin-bottom: 30px;
+        font-size: 1.8em;
+        font-weight: bold;
+    }
+
+    .input-group {
+        margin-bottom: 15px;
+    }
+
+    .login-input {
+        width: 100%;
+        padding: 12px 15px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        box-sizing: border-box;
+        font-size: 1em;
+        transition: border-color 0.3s;
+    }
+
+    .login-input:focus {
+        border-color: #ff4757; 
+        outline: none;
+    }
+
+    .login-button {
+        width: 100%;
+        padding: 12px;
+        background-color: #ff4757; 
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 1.1em;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+
+    .login-button:hover {
+        background-color: #e63748;
+    }
+
+    /* 아이디/비밀번호 찾기 기능 테이블 스타일 */
+    .search-table {
+        width: auto; 
+        margin: 0 auto; 
+        border-collapse: collapse;
+    }
+
+    .search-table td {
+        padding: 0 10px;
+        font-size: 0.9em;
+        color: #666;
+    }
+
+    .search-link {
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .search-link:hover {
+        color: #ff4757;
+        text-decoration: underline;
+    }
+
+
+    /* --- 우측 (이미지/문구) 영역: wjfqks2 --- */
+    #wjfqks2{
+        width: 50%;
+        height: 100%;
+        background-color: #333; 
+        position: relative;
+        display: flex;
+        align-items: center; 
+        justify-content: center; 
+        overflow: hidden; 
+    }
+
+    /* 배경 이미지 */
+    #wjfqks2 > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        z-index: 1; 
+    }
+
+    /* 텍스트 오버레이 박스 (가독성 확보) */
+    #text-overlay-box {
+        position: relative;
+        z-index: 2;
+        width: 70%; 
+        max-width: 450px;
+        padding: 40px 30px;
+        background-color: rgba(0, 0, 0, 0.45); /* 반투명 검은색 배경 */
+        border-radius: 10px;
+        text-align: center;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+    }
+
+    .tag{
+        width: 100%;
+        position: relative; 
+        text-align: center; 
+    }
+
+    /* 문구 배치 및 스타일 */
+    #tag2{ margin-bottom: 0.5em; }
+    #tag3{ margin-bottom: 2em; }
+    #tag4{ height: auto; }
+
+    h1{
+        color: white;
+        opacity: 1.0; 
+        font-size: 3.5em; 
+        font-weight: 900;
+        text-shadow: none; 
+        letter-spacing: 1px;
+        margin: 0;
+    }
+
+    h5{
+        color: white;
+        opacity: 1.0;
+        font-weight: 400;
+        font-size: 1em;
+        text-shadow: none;
+        margin: 10px 0 0 0;
+        line-height: 1.6;
+    }
+
+    #tag21, #tag22{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #tag22 > h5 {
+        width: 90%;
+    }
+
+    /* 버튼 스타일 */
+    #button1{
+        cursor: pointer;
+        border-radius: 5px; 
+        border: 2px solid white; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 180px; 
+        height: 50px; 
+        margin: 0 auto; 
+        transition: background-color 0.3s, border-color 0.3s;
+    }
+
+    #button1:hover {
+        background-color: #ff4757; 
+        border-color: #ff4757; 
+    }
+
+    h2{
+        color: white;
+        font-size: 1.1em;
+        font-weight: bold;
+    }
+
+    h1{
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+</style>
+
+<body class="ex03">
+    <div id="full">
+        <div id="wjfqks1">
+            <div id="rmsid"></div>
+            
+            <div id="login">
+                <h2 class="login-header">Sign in</h2>
+                <div class="input-group">
+                    <input type="text" placeholder="아이디" class="login-input">
+                </div>
+                <div class="input-group">
+                    <input type="password" placeholder="비밀번호" class="login-input">
+                </div>
+                <button class="login-button">로그인</button>
+            </div>
+            
+            <div id="search">
+                <table class="search-table">
+                    <tr>
+                        <td><a href="" class="search-link">아이디 찾기</a></td>
+                        <td>|</td>
+                        <td><a href="" class="search-link">비밀번호 찾기</a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="wjfqks2">
+            <img src="./img/city.jpg" alt="배경 이미지">
+            
+            <div id="text-overlay-box">
+                <div id="tag1" class="tag"></div>
+                
+                <div id="tag2" class="tag">
+                    <div id="tag21"><h1>환영합니다</h1></div>
+                </div>
+                
+                <div id="tag3" class="tag">
+                    <div id="tag22"><h5>저희는 팬아트를 투고하는 사이트입니다. 유저들의 팬아트를 모아 하나의 커뮤니티를 구성하려고 합니다. 많은 참여 부탁드립니다.</h5></div>
+                </div>
+                
+                <div id="tag4" class="tag">
+                    <div id="button1"><h2>Sign up</h2></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

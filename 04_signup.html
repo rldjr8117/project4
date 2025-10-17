@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="kor">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body {
+        width: 1280px;
+        margin: 0px auto;
+        border: 1px solid #ccc;
+        display: flex;
+        justify-content: center;
+        font-family: sans-serif;
+    }
+
+    #full {
+        width: 50%;
+    }
+
+    #logo-div {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+    }
+
+    #idpwpanel {
+        width: 100%;
+        height: auto;
+        padding-top: 10px;
+    }
+
+    #privatepanel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #numberpanel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    #buttonpanel {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 80px;
+        margin-top: 20px;
+    }
+
+    #logo-div1 {
+        margin-top: 5px;
+        width: 25%;
+        height: 100%;
+    }
+
+
+    #idpaneldetail {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 80%;
+        height: auto;
+    }
+
+    .idpanel {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .idpanel:not(:last-child) {
+        border-bottom: 1px solid #ccc;
+    }
+
+    #whyarea {
+        width: 100%;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+    }
+
+    #allpanel {
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+    }
+
+    #wadetail {
+        width: 80%;
+        height: 100%;
+        color: red;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+
+    #pda {
+        width: 80%;
+        height: 100%;
+    }
+
+    #ppd {
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+        height: auto;
+    }
+
+    #ppd5 {
+        width: 100%;
+        height: 25px;
+        color: red;
+        font-size: 14px;
+        padding-top: 5px;
+    }
+
+    .ppd {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .ppd:not(:last-child){
+        border-bottom: 1px solid #ccc;
+    }
+
+
+    #nda {
+        width: 80%;
+        height: 100%;
+    }
+
+    #npd {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    #npd1 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    #npd2 {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-top: 10px;
+        padding-left: 15px;
+        box-sizing: border-box;
+    }
+
+    #btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+    }
+
+    #rlbtn {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 50px;
+        background-color: rgb(95, 146, 255);
+        cursor: pointer;
+    }
+
+    #rlbtn span {
+        font-size: 18px;
+        color: white;
+        font-weight: bold;
+    }
+
+    input[type=text],input[type=password],input[type=email],input[type=tel],select {
+        width: 95%;
+        height: 80%;
+        padding-left: 10px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+    }
+
+    .gender-nation-btn {
+        width: 23%;
+        height: 60%;
+        margin: 0 1%;
+        border: 1px solid #ccc;
+        background-color: white;
+        cursor: pointer;
+        border-radius: 5px;
+    }
+
+    #footer{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        height: 100px;
+    }
+    #footer-detail{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        height: 100%;
+    }
+    li {
+        display: inline-block;
+    }
+
+     li span h2 {
+        font-size: 15px;
+        color: gray;
+        margin-right: 20px;
+        cursor: pointer;
+    }
+
+</style>
+
+<body>
+    <div id="full">
+        <div id="logo-div">
+            <div id="logo-div1">
+                <img src="./img/logo.png" width="100%" height="120px" alt="">
+            </div>
+            <div id="logo-div2">
+            </div>
+        </div>
+        <div id="idpwpanel">
+            <div id="allpanel">
+                <div id="idpaneldetail">
+                    <div id="idarea" class="idpanel">
+                        <input type="text" placeholder="아이디">
+                    </div>
+                    <div id="pwarea" class="idpanel">
+                        <input type="password" placeholder="비밀번호">
+                    </div>
+                    <div id="emalearea" class="idpanel">
+                        <input type="email" placeholder="[선택]이메일">
+                    </div>
+                </div>
+            </div>
+            <div id="whyarea">
+                <div id="wadetail">예외처리알림</div>
+            </div>
+        </div>
+        <div id="privatepanel">
+            <div id="pda">
+                <div id="ppd">
+                    <div id="ppd1" class="ppd">
+                        <input type="text" placeholder="이름">
+                    </div>
+                    <div id="ppd2" class="ppd">
+                        <input type="text" placeholder="생년월일 8자리">
+                    </div>
+                    <div id="ppd3" class="ppd">
+                        <select>
+                            <option value="" disabled selected>통신사 선택</option>
+                            <option value="skt">SKT</option>
+                            <option value="kt">KT</option>
+                            <option value="lg">LG U+</option>
+                        </select>
+                    </div>
+                    <div id="ppd4" class="ppd">
+                        <button class="gender-nation-btn">남자</button>
+                        <button class="gender-nation-btn">여자</button>
+                        <button class="gender-nation-btn">내국인</button>
+                        <button class="gender-nation-btn">외국인</button>
+                    </div>
+                </div>
+                <div id="ppd5">예외처리알림</div>
+            </div>
+        </div>
+        <div id="numberpanel">
+            <div id="nda">
+                <div id="npd">
+                    <div id="npd1">
+                        <input type="tel" placeholder="휴대전화번호">
+                    </div>
+                </div>
+                <div id="npd2">
+                    <input type="checkbox" id="agree_all" style="width: 20px; height: 20px;">
+                    <label for="agree_all" style="margin-left: 10px; font-size: 16px;">약관 전체동의</label>
+                </div>
+            </div>
+        </div>
+        <div id="buttonpanel">
+            <div id="btn">
+                <div id="rlbtn">
+                    <span>확인</span>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="footer-detail">
+                <ul id="footer-ul">
+                <li><span>
+                        <h2>이용약관</h2>
+                    </span></li>
+                <li><span>
+                        <h2>개인정보 처리방침</h2>
+                    </span></li>
+                <li><span>
+                        <h2>고객센터</h2>
+                    </span></li>
+            </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
